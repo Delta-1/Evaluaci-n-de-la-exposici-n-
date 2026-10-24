@@ -1,46 +1,83 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#183963"><meta name="description" content="Evaluación de la feria de salud sobre el VPH">
-<title>Evaluación | Juntos contra el VPH</title>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#173b77"><meta name="description" content="¡Juega y aprende sobre el Virus del Papiloma Humano en nuestro quiz UPDS!">
+<title>¡Juntos contra el VPH! · Quiz UPDS</title><link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <style>
-:root{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#173150;background:#f2f6fc}*{box-sizing:border-box}body{margin:0}main{max-width:680px;margin:auto;padding:20px 15px 60px}.hero{background:linear-gradient(125deg,#153663,#275a8a);border-radius:24px;padding:24px;color:white;box-shadow:0 13px 34px #173a6022;overflow:hidden}.top{display:flex;align-items:center;gap:14px}.brand{width:75px;height:75px;border:2px dashed #aec5e8;border-radius:16px;display:grid;place-items:center;font-size:18px;font-weight:900;flex-shrink:0;background:#ffffff1b}.brand img{max-height:100%;max-width:100%;object-fit:contain}.small{font-size:12px;letter-spacing:1.3px;font-weight:700;text-transform:uppercase;color:#cce5ff}.hero h1{line-height:1.16;font-size:30px;margin:19px 0 10px}.hero p{line-height:1.5;color:#e3edfc;margin:0}.art{display:flex;gap:10px;margin-top:20px;align-items:center}.art span{border-radius:22px;background:#ffffff20;padding:10px 15px;font-size:14px}.panel{background:#fff;margin-top:18px;padding:24px;border-radius:22px;box-shadow:0 4px 20px #193b6010}.intro{font-size:15px;color:#566c82;line-height:1.6}.group{margin:22px 0}.group label,.question{display:block;font-size:16px;font-weight:750;margin-bottom:10px}input[type=text],textarea{font:inherit;width:100%;padding:15px;border:1.5px solid #d2dfeb;border-radius:13px;outline:none;transition:border .2s}input:focus,textarea:focus{border-color:#176ba7}textarea{min-height:86px;resize:vertical}.required{color:#ca4454}.scale{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}.scale label{display:grid;place-items:center;padding:12px 4px;border:1.5px solid #d5e1ed;border-radius:12px;cursor:pointer;font-size:15px;font-weight:800;transition:.15s}.scale input{position:absolute;opacity:0;width:1px}.scale label:has(input:checked){border-color:#007fa8;background:#dff7f5;color:#005a69}.hints{display:flex;justify-content:space-between;color:#789;font-size:11px;margin-top:6px}.opts{display:flex;flex-wrap:wrap;gap:9px}.opts label{border:1.5px solid #d5e1ed;padding:11px 15px;border-radius:12px;cursor:pointer}.opts label:has(input:checked){background:#e5f6f4;border-color:#2a9e94}button{width:100%;background:#116b90;color:white;border:0;border-radius:15px;padding:16px;font-size:17px;font-weight:800;cursor:pointer}button:disabled{opacity:.6;cursor:wait}.notice{font-size:12px;color:#718398;margin:16px 0 0}.message{border-radius:12px;padding:13px;margin-top:16px;display:none}.message.show{display:block}.message.ok{background:#e0f7ed;color:#0d6842}.message.err{background:#fff0f0;color:#a32e37}.footer{text-align:center;color:#6d8195;font-size:12px;margin-top:22px}.hidden{display:none!important}@media(max-width:380px){.hero h1{font-size:26px}.panel{padding:17px}.scale{gap:4px}.scale label{padding:11px 3px}}
-</style></head><body><main>
-<section class="hero"><div class="top"><div class="brand" id="brand">UPDS</div><div><div class="small">Feria de promoción de la salud</div><strong>Evaluación de la exposición</strong></div></div>
-<h1>¡Juntos contra el VPH!</h1><p>Virus del Papiloma Humano: información, vacunación y prevención para todos.</p>
-<div class="art"><span>🛡️ Prevención</span><span>💉 Vacunación</span><span>💬 Educación</span></div></section>
-<section class="panel"><strong>Tu opinión es importante 💙</strong><p class="intro">¡Gracias por participar! Esta breve encuesta nos ayudará a mejorar nuestras exposiciones de salud. Tiempo estimado: 1 minuto.</p>
-<form id="form">
-<div class="group"><label for="nombre">Tu nombre <span class="required">*</span></label><input id="nombre" name="nombre" type="text" maxlength="100" autocomplete="name" placeholder="Escribe tu nombre" required></div>
-<div class="group"><span class="question">1. ¿La información presentada fue clara y fácil de entender? <span class="required">*</span></span><div class="scale" data-field="claridad"></div><div class="hints"><span>1 · Nada clara</span><span>5 · Muy clara</span></div></div>
-<div class="group"><span class="question">2. ¿Cómo calificas la explicación de los expositores? <span class="required">*</span></span><div class="scale" data-field="expositores"></div><div class="hints"><span>1 · Deficiente</span><span>5 · Excelente</span></div></div>
-<div class="group"><span class="question">3. ¿Qué tan útil fue el tema para tu salud? <span class="required">*</span></span><div class="scale" data-field="utilidad"></div><div class="hints"><span>1 · Poco útil</span><span>5 · Muy útil</span></div></div>
-<div class="group"><span class="question">4. ¿Comprendiste cómo se previene el VPH? <span class="required">*</span></span><div class="opts"><label><input type="radio" name="prevencion" value="Sí" required> Sí</label><label><input type="radio" name="prevencion" value="Parcialmente"> Parcialmente</label><label><input type="radio" name="prevencion" value="No"> No</label></div></div>
-<div class="group"><span class="question">5. ¿Recomendarías esta exposición a otras personas? <span class="required">*</span></span><div class="opts"><label><input type="radio" name="recomendacion" value="Sí" required> Sí</label><label><input type="radio" name="recomendacion" value="Tal vez"> Tal vez</label><label><input type="radio" name="recomendacion" value="No"> No</label></div></div>
-<div class="group"><label for="comentario">¿Qué podríamos mejorar? <span style="font-weight:400;color:#789">(opcional)</span></label><textarea id="comentario" maxlength="500" placeholder="Déjanos tu sugerencia..."></textarea></div>
-<input id="website" type="text" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
-<button id="send" type="submit">Enviar evaluación →</button><div id="message" class="message" role="status" aria-live="polite"></div>
-<p class="notice">Solo solicitamos tu nombre y tu valoración. Tus respuestas serán utilizadas con fines académicos. No compartas información médica personal.</p></form>
-<div id="thanks" class="hidden"><h2>¡Muchas gracias! 💙</h2><p>Tu evaluación fue registrada correctamente. Juntos promovemos una comunidad mejor informada sobre el VPH.</p></div>
-</section><div class="footer">Feria de Salud • Juntos contra el VPH</div></main>
-<script src="config.js"></script><script>
-(function(){
-const c=window.EVALUACION_CONFIG||{};if(c.logoUrl){const b=document.getElementById('brand');const im=document.createElement('img');im.src=c.logoUrl;im.alt='Logotipo institucional';b.replaceChildren(im)}
-document.querySelectorAll('.scale').forEach(s=>{const key=s.dataset.field;for(let i=1;i<=5;i++){const l=document.createElement('label');l.innerHTML='<input required type="radio" name="'+key+'" value="'+i+'"><span>'+i+'</span>';s.append(l)}});
-const form=document.getElementById('form'),message=document.getElementById('message'),send=document.getElementById('send');
-form.addEventListener('submit',async e=>{e.preventDefault();if(!form.reportValidity())return;
-if(document.getElementById('website').value)return;
-if(!c.scriptUrl || !c.scriptUrl.startsWith('https://script.google.com/macros/s/')){show('El formulario está preparado, pero falta conectar la planilla de Google Sheets.',false);return}
-const fd=new FormData(form);const body={nombre:fd.get('nombre').trim(),claridad:+fd.get('claridad'),expositores:+fd.get('expositores'),utilidad:+fd.get('utilidad'),prevencion:fd.get('prevencion'),recomendacion:fd.get('recomendacion'),comentario:document.getElementById('comentario').value.trim(),website:''};
-send.disabled=true;send.textContent='Enviando...';message.className='message';
-try{
-// Text/plain avoids preflight on the cross-origin Google Apps Script endpoint.
-// Google Apps Script may redirect and not expose CORS headers; use no-cors.
-// The success shown here means the request was dispatched, not verified in Sheets.
-await fetch(c.scriptUrl,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(body)});
-form.classList.add('hidden');document.getElementById('thanks').classList.remove('hidden');document.querySelector('#thanks p').textContent='Tu respuesta fue enviada. ¡Gracias por ayudarnos a mejorar!';}
-catch(err){show('No se pudo enviar. Comprueba tu conexión e inténtalo nuevamente.',false)}
-finally{send.disabled=false;send.textContent='Enviar evaluación →'}
-});
-function show(t,ok){message.textContent=t;message.className='message show '+(ok?'ok':'err')}
-})();
+:root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#17365a;background:#edf7fc}*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(circle at top left,#ccedfc,transparent 35%),radial-gradient(circle at bottom right,#d8e5fe,transparent 34%),#f5fbfe}
+button{font:inherit}button:focus-visible{outline:3px solid #f8ac42;outline-offset:3px}
+.shell{width:min(700px,100%);margin:auto;padding:20px 16px 35px}.top{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:4px 6px 18px}
+.top img{width:116px;height:auto}.top small{text-transform:uppercase;letter-spacing:.07em;color:#54718e;font-size:10px;font-weight:850;text-align:right;line-height:1.4}
+.card{overflow:hidden;background:#fff;border:1px solid #ffffffb5;border-radius:28px;box-shadow:0 20px 55px #1a4a7a19}
+.hero{position:relative;overflow:hidden;background:linear-gradient(125deg,#17356e,#205497 65%,#078f9f);padding:34px 28px 30px;min-height:242px;color:#fff}
+.hero:after{content:"";position:absolute;right:-100px;top:-140px;width:320px;height:320px;border:1px solid #ffffff26;border-radius:50%;box-shadow:0 0 0 42px #ffffff08,0 0 0 88px #ffffff08}
+.eyebrow{font-size:11px;letter-spacing:.16em;color:#a0f4f1;font-weight:900;text-transform:uppercase}
+.hero h1{font-size:clamp(33px,7vw,46px);letter-spacing:-.055em;line-height:1.07;margin:14px 0 12px;font-weight:900}
+.hero p{font-size:14px;line-height:1.55;color:#e6f4fd;margin:0;max-width:400px}.virus{position:absolute;right:21px;top:55px;font-size:85px;opacity:.24;transform:rotate(-20deg)}
+.content{padding:29px 29px 34px;min-height:370px}h2{font-size:24px;letter-spacing:-.03em;line-height:1.25;margin:12px 0}
+p{line-height:1.6}.muted{color:#637a90;font-size:14px;line-height:1.65}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:21px}.chip{background:#eaf6fc;color:#27547d;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:800}
+.action{border:0;display:block;width:100%;min-height:56px;border-radius:16px;background:linear-gradient(105deg,#00a7b6,#117fc1);box-shadow:0 9px 21px #00aac02b;color:#fff;font-size:16px;font-weight:850;padding:15px;cursor:pointer;transition:transform .15s,filter .15s}
+.action:hover{transform:translateY(-2px);filter:brightness(1.05)}.action.dark{background:#20487e;box-shadow:none}
+.hint{text-align:center;color:#7b8ea0;font-size:12px;margin-top:19px}
+.topline{display:flex;justify-content:space-between;align-items:center;color:#3b6187;font-size:12px;font-weight:850}
+.score{background:#e3f7f2;color:#087c7e;border-radius:999px;padding:9px 13px}
+.progress{height:9px;margin:15px 0 24px;background:#e7f0f7;border-radius:99px;overflow:hidden}.progress>div{background:linear-gradient(90deg,#04adba,#70d8af);height:100%;width:0%;transition:width .35s}
+.category{color:#0b9ea6;letter-spacing:.13em;font-size:11px;font-weight:900;text-transform:uppercase}
+.question{font-weight:900;font-size:clamp(21px,5vw,26px);line-height:1.28;margin:9px 0 20px;letter-spacing:-.025em}
+.answers{display:grid;gap:10px}.answer{border:1.5px solid #d9e7f2;border-radius:15px;display:flex;gap:12px;align-items:center;text-align:left;padding:13px 15px;background:#f8fbfe;color:#244766;min-height:64px;font-size:14px;font-weight:720;cursor:pointer;transition:transform .15s,border .15s}
+.answer:hover:not(:disabled){transform:translateX(3px);border-color:#47b7c5}.answer:disabled{cursor:default}
+.letter{height:32px;width:32px;flex:0 0 32px;display:grid;place-items:center;border-radius:10px;background:#e6eff8;color:#2a5c87;font-weight:900}
+.answer.correct{border-color:#3cab83;background:#e5f8ef;color:#166c4e}.answer.correct .letter{background:#c2efd9}
+.answer.wrong{border-color:#e98894;background:#fff0f1;color:#9b3443}.answer.wrong .letter{background:#fbdde1}.answer.faded{opacity:.64}
+.feedback{margin:17px 0 0;border:1px solid #b9e9d0;background:#e9f8f0;color:#1d5c45;padding:16px;border-radius:15px;font-size:13px;line-height:1.56}
+.feedback.bad{background:#fff6ee;border-color:#f1debe;color:#795324}.feedback strong{display:block;font-size:15px;margin-bottom:4px}
+.next{margin-top:17px}.hidden{display:none!important}.result{text-align:center}.medal{font-size:62px}
+.result .total{font-size:62px;line-height:1.15;font-weight:950;color:#174376;letter-spacing:-.07em}.result .total span{font-size:25px;color:#8ba1b7}
+.recap{background:#f0f7fc;padding:15px 18px;border-radius:14px;text-align:left;color:#42637c;font-size:13px;line-height:1.55;margin:20px 0}
+.footer{text-align:center;font-size:11px;color:#6a8298;margin-top:22px;line-height:1.6}
+@media(max-width:480px){.shell{padding:10px 12px 25px}.top img{width:99px}.card{border-radius:23px}.hero{padding:29px 22px;min-height:222px}.virus{font-size:65px;right:8px}.content{padding:24px 19px 28px}.top small{font-size:9px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style></head>
+<body><main class="shell">
+<div class="top"><img src="assets/upds.svg" width="116" alt="UPDS — Universidad Privada Domingo Savio"><small>Feria de Promoción<br>de la Salud Comunitaria</small></div>
+<div class="card"><header class="hero"><div class="eyebrow">Aprende · Responde · Previene</div>
+<h1>¡Juntos contra<br>el VPH!</h1><p>Un pequeño desafío sobre el Virus del Papiloma Humano. ¿Cuánto sabes sobre tu salud?</p><div class="virus" aria-hidden="true">🦠</div></header>
+<div class="content">
+<section id="welcome"><div class="chips"><span class="chip">🎮 Mini juego</span><span class="chip">8 preguntas</span><span class="chip">⏱ 2 minutos</span></div>
+<h2>¿Te animas al desafío?</h2><p class="muted">Elige la respuesta correcta, suma puntos y aprende con cada pregunta. No necesitas registrarte ni compartir tus datos.</p>
+<button class="action" id="start" type="button">¡Comenzar el juego! →</button><p class="hint">🛡️ Prevenir el VPH es responsabilidad de todos.</p></section>
+<section id="game" class="hidden"><div class="topline"><span id="count">Pregunta 1 de 8</span><span class="score">⭐ <span id="score">0</span> pts</span></div>
+<div class="progress" aria-hidden="true"><div id="bar"></div></div><div class="category" id="category"></div><h2 class="question" id="question" tabindex="-1"></h2><div class="answers" id="answers" role="group" aria-label="Opciones de respuesta"></div>
+<div class="feedback hidden" id="feedback" role="status" aria-live="polite"></div><div class="next hidden" id="nextBox"><button class="action dark" id="next" type="button">Siguiente pregunta →</button></div></section>
+<section id="finish" class="result hidden"><div class="medal" id="medal">🏆</div><div class="total" id="total"></div><h2 id="title">¡Excelente!</h2><p class="muted" id="resultText"></p>
+<div class="recap">💙 <strong>Recuerda:</strong> la vacunación, el uso de preservativo y los controles de salud recomendados ayudan a prevenir enfermedades relacionadas con el VPH.</div>
+<button class="action" type="button" id="restart">↻ Jugar otra vez</button></section>
+</div></div><div class="footer">UPDS · Feria de Salud<br>Contenido educativo; no sustituye la orientación de un profesional de salud.</div></main>
+<script>
+"use strict";
+const Q=[
+["Conocimientos básicos","¿Qué significa VPH?",["Virus del Papiloma Humano","Vacuna para Pacientes Hospitalizados","Virus de Protección Humana","Vacunación Preventiva Hospitalaria"],0,"VPH significa Virus del Papiloma Humano, una infección muy frecuente."],
+["Transmisión","¿Cómo se transmite principalmente el VPH?",["Por compartir vasos de agua","Por contacto íntimo de piel y mucosas","Por picaduras de mosquito","Por estrechar la mano"],1,"Se transmite principalmente durante el contacto íntimo sexual, incluso sin penetración."],
+["Mitos y realidades","¿El VPH afecta solamente a las mujeres?",["Sí, solo a mujeres","Solo a niños pequeños","No, puede afectar a hombres y mujeres","Solo a adultos mayores"],2,"Hombres y mujeres pueden infectarse, transmitir el virus y sufrir complicaciones."],
+["Señales y síntomas","¿Una persona sin verrugas puede tener VPH?",["No, siempre hay verrugas","Sí, muchas infecciones no causan síntomas","Solo si tiene fiebre","No, desaparece inmediatamente"],1,"Muchas infecciones por VPH son asintomáticas."],
+["Vacunación","¿Cuál es el objetivo principal de la vacuna contra el VPH?",["Curar infecciones existentes","Evitar todas las ITS","Prevenir nuevas infecciones por los tipos incluidos en la vacuna","Reemplazar todos los controles"],2,"La vacuna ayuda a prevenir nuevas infecciones por determinados tipos de VPH. No cura infecciones existentes."],
+["Cuidado y detección","¿Qué examen detecta alteraciones celulares en el cuello uterino?",["Electrocardiograma","Papanicolaou (PAP)","Radiografía de tórax","Prueba de audición"],1,"El Papanicolaou identifica alteraciones celulares. También existen pruebas de VPH según las recomendaciones médicas."],
+["Prevención","¿El preservativo elimina por completo el riesgo de VPH?",["Sí, al 100 %","No, lo reduce pero no lo elimina","No sirve para ninguna ITS","Solo protege de la gripe"],1,"Reduce el riesgo, pero el virus también puede transmitirse por zonas de piel no cubiertas."],
+["Mensaje final","¿Cuál es la mejor actitud frente al VPH?",["Ignorar el tema","Pensar que solo deben cuidarse las mujeres","Buscar información confiable, vacunarse y seguir las recomendaciones de salud","Tomar antibióticos por cuenta propia"],2,"La prevención es compartida: información, vacunación y controles adecuados protegen a la comunidad."]
+];
+const el=id=>document.getElementById(id);let at=0,points=0,answered=false;
+function view(name){["welcome","game","finish"].forEach(id=>el(id).classList.toggle("hidden",id!==name));}
+function start(){at=0;points=0;view("game");render();}
+function render(){answered=false;const [cat,q,opts]=Q[at];
+el("count").textContent="Pregunta "+(at+1)+" de "+Q.length;el("score").textContent=points*100;el("bar").style.width=(100*(at+1)/Q.length)+"%";el("category").textContent=cat;el("question").textContent=q;el("answers").replaceChildren();el("feedback").className="feedback hidden";el("nextBox").classList.add("hidden");
+opts.forEach((txt,i)=>{const b=document.createElement("button");b.type="button";b.className="answer";const l=document.createElement("span");l.className="letter";l.textContent="ABCD"[i];l.setAttribute("aria-hidden","true");const t=document.createElement("span");t.textContent=txt;b.append(l,t);b.addEventListener("click",()=>choose(i));el("answers").append(b);});
+el("question").focus({preventScroll:true});}
+function choose(i){if(answered)return;answered=true;const q=Q[at];let ok=i===q[3];if(ok)points++;el("score").textContent=points*100;
+[...el("answers").children].forEach((b,j)=>{b.disabled=true;b.classList.add(j===q[3]?"correct":j===i?"wrong":"faded");});
+const box=el("feedback");box.className="feedback"+(ok?"":" bad");const t=document.createElement("strong");t.textContent=ok?"✅ ¡Correcto! +100 puntos":"💡 ¡Ahora ya lo sabes!";const p=document.createElement("span");p.textContent=q[4];box.replaceChildren(t,p);el("nextBox").classList.remove("hidden");el("next").textContent=at===Q.length-1?"Ver mi resultado →":"Siguiente pregunta →";}
+function next(){if(!answered)return;if(at<Q.length-1){at++;render();}else{view("finish");el("total").innerHTML=(points*100)+"<span> / "+(Q.length*100)+"</span>";el("medal").textContent=points>=7?"🏆":points>=5?"🌟":"💙";el("title").textContent=points>=7?"¡Excelente trabajo!":points>=5?"¡Muy bien!":"¡Sigue aprendiendo!";el("resultText").textContent=points>=7?"¡Dominas los puntos clave sobre el VPH! Comparte lo que aprendiste.":points>=5?"Tienes muy buenos conocimientos. Cada respuesta te ayuda a cuidar tu salud.":"Lo importante es aprender. Revisa las explicaciones y prueba otra vez.";window.scrollTo({top:0,behavior:"smooth"});}}
+el("start").addEventListener("click",start);el("restart").addEventListener("click",start);el("next").addEventListener("click",next);
 </script></body></html>
